@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin - AI Document Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/static/css/admin.css"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="main-header">
+
+        <div>
+            <h1>Admin Panel</h1>
+
+            <p class="subtitle">
+                AI Document Generator
+            </p>
+        </div>
+
+        <button
+            id="logoutButton"
+            class="secondary-button hidden"
+            type="button"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <section
+        id="loginSection"
+        class="card"
+    >
+
+        <h2>Admin Login</h2>
+
+        <form id="loginForm">
+
+            <div class="field">
+
+                <label for="loginEmail">
+                    Email
+                </label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <div
+            id="loginStatus"
+            class="status"
+        ></div>
+
+    </section>
+
+
+    <!-- ADMIN APPLICATION -->
+
+    <main
+        id="adminSection"
+        class="hidden"
+    >
+
+        <!-- UPLOAD -->
+
+        <section class="card">
+
+            <h2>Upload Template</h2>
+
+            <form id="uploadForm">
+
+                <div class="field">
+
+                    <label for="templateTitleInput">
+                        Template Title
+                    </label>
+
+                    <input
+                        id="templateTitleInput"
+                        type="text"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="templateFile">
+                        DOCX Template
+                    </label>
+
+                    <input
+                        id="templateFile"
+                        type="file"
+                        accept=".docx"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Upload Template
+                </button>
+
+            </form>
+
+
+            <div
+                id="uploadStatus"
+                class="status"
+            ></div>
+
+        </section>
+
+
+        <!-- CURRENT TEMPLATE -->
+
+        <section
+            id="templateActionsSection"
+            class="card hidden"
+        >
+
+            <h2>Template Processing</h2>
+
+            <p>
+                Template ID:
+                <strong id="currentTemplateId">
+                    -
+                </strong>
+            </p>
+
+
+            <div class="action-buttons">
+
+                <button
+                    id="extractButton"
+                    type="button"
+                >
+                    Extract Text
+                </button>
+
+                <button
+                    id="analyzeButton"
+                    type="button"
+                >
+                    AI Analyze
+                </button>
+
+                <button
+                    id="loadFieldsButton"
+                    type="button"
+                >
+                    Load Fields
+                </button>
+
+                <button
+                    id="publishButton"
+                    type="button"
+                >
+                    Publish Template
+                </button>
+
+            </div>
+
+
+            <div
+                id="templateStatus"
+                class="status"
+            ></div>
+
+        </section>
+
+
+        <!-- EXTRACTION -->
+
+        <section
+            id="extractionSection"
+            class="card hidden"
+        >
+
+            <h2>Extracted Content</h2>
+
+            <pre id="extractedContent"></pre>
+
+        </section>
+
+
+        <!-- FIELDS -->
+
+        <section
+            id="fieldsSection"
+            class="card hidden"
+        >
+
+            <div class="section-heading">
+
+                <h2>Template Fields</h2>
+
+                <button
+                    id="addFieldButton"
+                    type="button"
+                >
+                    Add Field
+                </button>
+
+            </div>
+
+
+            <div id="fieldsContainer"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="/static/js/admin-app.js"
+></script>
+
+</body>
+
+</html>

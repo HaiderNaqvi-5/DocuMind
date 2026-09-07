@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workspace | Documind</title>
+  <link rel="stylesheet" href="/static/css/unified.css">
+</head>
+<body class="app-page">
+  <div id="appLoader" class="app-loader"><span class="spinner"></span><p>Opening your workspace...</p></div>
+  <div id="appShell" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand sidebar-brand" href="/dashboard"><span class="brand-mark">D</span><span>Documind</span></a>
+      <div class="workspace-label"><span>Workspace</span><strong id="roleLabel">User portal</strong></div>
+      <nav id="sideNav" class="side-nav" aria-label="Workspace navigation"></nav>
+      <div class="sidebar-help"><span class="help-icon">?</span><strong>Need a hand?</strong><p>Follow the guided steps or return to your dashboard.</p></div>
+      <button id="logoutButton" class="nav-logout" type="button"><span class="nav-icon">&#8617;</span>Log out</button>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button id="menuButton" class="icon-button menu-button" type="button" aria-label="Open navigation">&#9776;</button>
+        <div class="topbar-title"><p id="breadcrumb">Workspace / Dashboard</p><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="topbar-actions"><button class="icon-button" type="button" aria-label="Notifications">&#9675;<span class="notification-dot"></span></button><div class="user-menu"><span class="avatar" id="userAvatar">U</span><div><strong id="userName">User</strong><small id="userRole">User</small></div></div></div>
+      </header>
+      <main id="mainContent" class="content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><div class="modal-header"><div><span class="eyebrow" id="modalEyebrow">Details</span><h2 id="modalTitle">Modal</h2></div><button id="modalClose" class="icon-button" type="button" aria-label="Close">&times;</button></div><div id="modalBody" class="modal-body"></div></div>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <div id="mobileScrim" class="mobile-scrim hidden"></div>
+  <script type="module" src="/static/js/dashboard.js"></script>
+</body>
+</html>

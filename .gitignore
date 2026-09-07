@@ -1,0 +1,23 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Uploaded and generated documents
+storage/templates/*
+storage/generated/*
+
+!storage/templates/.gitkeep
+!storage/generated/.gitkeep
+
+# Test and tooling artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Document Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="main-header">
+
+        <div>
+            <h1>AI Document Generator</h1>
+
+            <p class="subtitle">
+                Generate documents from published templates
+            </p>
+        </div>
+
+        <button
+            id="logoutButton"
+            class="secondary-button hidden"
+            type="button"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- ============================================== -->
+    <!-- LOGIN -->
+    <!-- ============================================== -->
+
+    <section
+        id="loginSection"
+        class="card"
+    >
+
+        <h2>User Login</h2>
+
+        <form id="loginForm">
+
+            <div class="field">
+
+                <label for="loginEmail">
+                    Email
+                </label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    required
+                    autocomplete="email"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    required
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <div
+            id="loginStatus"
+            class="status"
+        ></div>
+
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- APPLICATION -->
+    <!-- ============================================== -->
+
+    <main
+        id="applicationSection"
+        class="hidden"
+    >
+
+        <section class="card">
+
+            <h2>Create Document</h2>
+
+
+            <div class="field">
+
+                <label for="templateSelect">
+                    Select Template
+                </label>
+
+                <select id="templateSelect">
+
+                    <option value="">
+                        Loading templates...
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="templateTitle"
+                class="template-title"
+            >
+                Select a template.
+            </div>
+
+
+            <form id="documentForm">
+
+                <div id="dynamicFields"></div>
+
+                <button
+                    id="generateButton"
+                    type="submit"
+                    disabled
+                >
+                    Generate Document
+                </button>
+
+            </form>
+
+
+            <div
+                id="generationStatus"
+                class="status"
+            ></div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>My Documents</h2>
+
+                <button
+                    id="refreshDocumentsButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div id="myDocuments">
+                Loading documents...
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="/static/js/app.js"
+></script>
+
+</body>
+
+</html>

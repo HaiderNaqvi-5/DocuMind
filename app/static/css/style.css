@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    margin: 0;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 8px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #bbb;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 18px;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.secondary-button {
+    background: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.status {
+    margin-top: 18px;
+
+    white-space: pre-wrap;
+}
+
+.template-title {
+    margin-bottom: 25px;
+
+    color: #555;
+
+    font-weight: bold;
+}
+
+.signature-canvas {
+    width: 100%;
+    height: 180px;
+
+    background: white;
+
+    border: 1px solid #333;
+    border-radius: 4px;
+
+    touch-action: none;
+}
+
+.clear-signature-button {
+    margin-top: 8px;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.document-card {
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 16px;
+
+    margin-top: 15px;
+}
+
+.document-card h3 {
+    margin-top: 0;
+}
+
+.document-details {
+    border-top: 1px solid #ddd;
+
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.document-button {
+    margin-right: 8px;
+}

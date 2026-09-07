@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Documind</title>
+  <link rel="stylesheet" href="/static/css/unified.css">
+</head>
+<body class="auth-page">
+  <a class="brand auth-brand" href="/"><span class="brand-mark">D</span><span>Documind</span></a>
+  <main class="auth-layout">
+    <section class="auth-story">
+      <div>
+        <span class="eyebrow light">One workspace. Every document.</span>
+        <h1>Fill the details.<br>Keep the design.</h1>
+        <p>Controlled AI extraction, precise validation, and secure generation in a workflow anyone can understand.</p>
+      </div>
+      <div class="auth-proof">
+        <blockquote>“A complete document workflow, without compromising the template that made it official.”</blockquote>
+        <div><span class="proof-icon">&#10022;</span><p><strong>Purpose-built automation</strong><br><small>AI where useful. Rules where essential.</small></p></div>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-intro"><span class="eyebrow">Secure access</span><h2 id="authTitle">Welcome back</h2><p id="authSubtitle">Sign in and we’ll take you to the right workspace.</p></div>
+        <div class="auth-tabs" role="tablist" aria-label="Authentication options">
+          <button class="active" id="loginTab" type="button" role="tab" aria-selected="true">Sign in</button>
+          <button id="registerTab" type="button" role="tab" aria-selected="false">Create account</button>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-field"><label for="loginEmail">Email address</label><input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><span class="field-error"></span></div>
+          <div class="form-field"><div class="label-row"><label for="loginPassword">Password</label></div><div class="password-wrap"><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="password-toggle" type="button" aria-label="Show password">Show</button></div><span class="field-error"></span></div>
+          <button class="button button-block" type="submit"><span>Sign in</span><span aria-hidden="true">&rarr;</span></button>
+        </form>
+
+        <form id="registerForm" class="hidden" novalidate>
+          <div class="form-field"><label for="registerName">Full name</label><input id="registerName" name="name" type="text" autocomplete="name" placeholder="Your full name" minlength="2" required><span class="field-error"></span></div>
+          <div class="form-field"><label for="registerEmail">Email address</label><input id="registerEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><span class="field-error"></span></div>
+          <div class="form-field"><label for="registerPassword">Password</label><div class="password-wrap"><input id="registerPassword" name="password" type="password" autocomplete="new-password" placeholder="At least 6 characters" minlength="6" required><button class="password-toggle" type="button" aria-label="Show password">Show</button></div><span class="field-error"></span></div>
+          <p class="account-note"><span>&check;</span> Public accounts are created with standard user access.</p>
+          <button class="button button-block" type="submit"><span>Create account</span><span aria-hidden="true">&rarr;</span></button>
+        </form>
+        <p class="auth-footer">By continuing, you agree to use the platform responsibly.</p>
+      </div>
+    </section>
+  </main>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <script type="module" src="/static/js/unified-auth.js"></script>
+</body>
+</html>

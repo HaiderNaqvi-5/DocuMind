@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+psycopg[binary,pool]
+python-dotenv
+pydantic
+python-multipart
+openai
+python-docx
+docxtpl
+passlib
+python-jose[cryptography]
+email-validator
+PyMuPDF
+pytest

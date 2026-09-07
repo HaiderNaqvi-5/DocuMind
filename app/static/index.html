@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fill DOCX and PDF templates with controlled AI, validation, and e-signatures while preserving the original layout.">
+  <title>Documind | AI Document Generator</title>
+  <link rel="stylesheet" href="/static/css/unified.css">
+</head>
+<body class="landing-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Documind home">
+      <span class="brand-mark">D</span><span>Documind</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#supported-fields">Supported fields</a>
+    </nav>
+    <a class="button button-small button-secondary" href="/login">Sign in</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="status-dot"></span> AI-assisted, human-controlled</span>
+        <h1>Documents completed.<br><span>Formatting untouched.</span></h1>
+        <p>Upload DOCX or PDF templates, detect supported personal fields, validate every response, add e-signatures, and generate completed files without rebuilding the original layout.</p>
+        <div class="button-row">
+          <a class="button" href="/login#register">Get started <span aria-hidden="true">&rarr;</span></a>
+          <a class="button button-secondary" href="/login">Sign in</a>
+        </div>
+        <div class="trust-row" aria-label="Product qualities">
+          <span>Controlled field detection</span><span>Pakistan-specific validation</span><span>Secure history</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Document workflow preview">
+        <div class="visual-glow"></div>
+        <div class="document-mockup">
+          <div class="mockup-top"><span class="file-chip">DOCX</span><span class="mockup-dots">&bull;&bull;&bull;</span></div>
+          <div class="mockup-title"></div><div class="mockup-line wide"></div><div class="mockup-line"></div>
+          <div class="detected-field"><span>Name</span><strong>Full name detected</strong><i>&check;</i></div>
+          <div class="detected-field"><span>CNIC</span><strong>CNIC detected</strong><i>&check;</i></div>
+          <div class="mockup-line wide"></div><div class="mockup-line short"></div>
+          <div class="signature-scribble">Ahsan</div>
+        </div>
+        <div class="floating-card card-fields"><strong>8</strong><span>Supported fields</span></div>
+        <div class="floating-card card-ready"><span class="success-icon">&check;</span><div><strong>Ready to publish</strong><span>Layout preserved</span></div></div>
+      </div>
+    </section>
+
+    <section class="landing-section" id="how-it-works">
+      <div class="section-heading centered"><span class="eyebrow">Simple workflow</span><h2>From template to finished document</h2><p>One clear process for administrators and document creators.</p></div>
+      <div class="process-grid">
+        <article><span>01</span><div class="feature-icon">&uarr;</div><h3>Upload a template</h3><p>An admin uploads an existing DOCX or PDF document.</p></article>
+        <article><span>02</span><div class="feature-icon">&#10022;</div><h3>Detect and review</h3><p>AI maps only approved personal fields. The admin reviews every result.</p></article>
+        <article><span>03</span><div class="feature-icon">&#9998;</div><h3>Complete and sign</h3><p>Users enter validated information and sign only when required.</p></article>
+        <article><span>04</span><div class="feature-icon">&darr;</div><h3>Preview and download</h3><p>The completed file stays available in secure document history.</p></article>
+      </div>
+    </section>
+
+    <section class="landing-section feature-section" id="features">
+      <div class="section-heading"><span class="eyebrow">Built for reliable output</span><h2>Useful AI, deterministic control</h2><p>Automation where interpretation helps, strict rules where correctness matters.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-card-wide"><div class="feature-icon">&#10022;</div><h3>Smart field detection</h3><p>Maps ambiguous labels to a controlled field schema and ignores arbitrary resume sections.</p><div class="mini-field-list"><span>Applicant Name <b>&rarr; full_name</b></span><span>Mobile No. <b>&rarr; phone_number</b></span></div></article>
+        <article class="feature-card"><div class="feature-icon">&#9638;</div><h3>DOCX + PDF</h3><p>A consistent workflow for the document formats people already use.</p></article>
+        <article class="feature-card"><div class="feature-icon">&#9707;</div><h3>Layout preservation</h3><p>Fill the source document rather than recreating it from plain text.</p></article>
+        <article class="feature-card"><div class="feature-icon">PK</div><h3>Local validation</h3><p>Inline checks for Pakistani mobile numbers, CNIC, email, and date of birth.</p></article>
+        <article class="feature-card"><div class="feature-icon">&#9998;</div><h3>Browser e-signature</h3><p>Draw, clear, and confirm a signature directly in the completion flow.</p></article>
+        <article class="feature-card"><div class="feature-icon">&#9711;</div><h3>Role-based access</h3><p>One cohesive product experience with focused admin and user workspaces.</p></article>
+        <article class="feature-card"><div class="feature-icon">&#128274;</div><h3>Secure history</h3><p>Return to generated documents and download through protected endpoints.</p></article>
+      </div>
+    </section>
+
+    <section class="landing-section fields-section" id="supported-fields">
+      <div class="section-heading centered"><span class="eyebrow">Controlled schema</span><h2>Only the fields you expect</h2><p>No invented categories and no accidental extraction of long-form content.</p></div>
+      <div class="field-pill-grid">
+        <span><i>AN</i>Full Name</span><span><i>@</i>Email</span><span><i>03</i>Phone Number</span><span><i>G</i>Gender</span>
+        <span><i>ID</i>CNIC</span><span><i>31</i>Date of Birth</span><span><i>&#8962;</i>Address</span><span><i>&#9998;</i>E-Signature</span>
+      </div>
+    </section>
+
+    <section class="landing-cta">
+      <div><span class="eyebrow light">Ready when you are</span><h2>Turn document filling into a guided workflow.</h2><p>Start with a template. Finish with a polished, validated document.</p></div>
+      <div class="button-row"><a class="button button-light" href="/login#register">Start using the platform</a><a class="button button-ghost-light" href="/login">Sign in</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">D</span><span>Documind</span></a><p>AI Document Generator</p><span>&copy; 2026 Documind</span></footer>
+</body>
+</html>

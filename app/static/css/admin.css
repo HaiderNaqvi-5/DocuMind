@@ -1,0 +1,63 @@
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.action-buttons button {
+    margin-top: 0;
+}
+
+#extractedContent {
+    max-height: 400px;
+    overflow: auto;
+
+    background: #f6f6f6;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    white-space: pre-wrap;
+}
+
+.admin-field-card {
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+    margin-top: 15px;
+}
+
+.admin-field-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+}
+
+.admin-field-actions {
+    margin-top: 12px;
+}
+
+.delete-button {
+    margin-left: 8px;
+}
+
+@media (
+    max-width: 650px
+) {
+
+    .admin-field-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
