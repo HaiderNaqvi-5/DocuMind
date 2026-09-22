@@ -2,6 +2,8 @@
 
 > Turn reusable DOCX and PDF templates into validated, signed documents through a guided web workflow.
 
+Repository: [HaiderNaqvi-5/DocuMind](https://github.com/HaiderNaqvi-5/DocuMind)
+
 Documind is a FastAPI and PostgreSQL application for turning DOCX and PDF templates into guided, validated, signed documents. Administrators upload and review templates; users fill published templates, preview the result, and download their generated document.
 
 ## Features
