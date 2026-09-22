@@ -1,5 +1,7 @@
 # Documind — AI Document Generator
 
+> Turn reusable DOCX and PDF templates into validated, signed documents through a guided web workflow.
+
 Documind is a FastAPI and PostgreSQL application for turning DOCX and PDF templates into guided, validated, signed documents. Administrators upload and review templates; users fill published templates, preview the result, and download their generated document.
 
 ## Features
@@ -12,6 +14,13 @@ Documind is a FastAPI and PostgreSQL application for turning DOCX and PDF templa
 - Role-based admin and user workflows
 - Generated-document history and secure file access
 - Automated tests for validation and document handlers
+
+## How it works
+
+```text
+Admin uploads a template → Documind detects supported fields → Admin reviews and publishes it
+User completes the published form → values are validated → signed document is generated and stored
+```
 
 ## Supported fields
 
@@ -69,6 +78,17 @@ The analyzer uses an explicit allowlist. Resume sections such as experience, sum
    - API documentation: <http://127.0.0.1:8000/docs>
    - Health check: <http://127.0.0.1:8000/api/health>
 
+## Main API areas
+
+The interactive API reference at `/docs` is the source of truth for request and response schemas.
+
+| Area | Base path | Purpose |
+| --- | --- | --- |
+| Authentication | `/api/auth` | Register, sign in, and manage access tokens. |
+| Administration | `/api/admin` | Upload templates, review field mappings, and publish templates. |
+| User documents | `/api/user` | Browse published templates, generate documents, and access document history. |
+| Health | `/api/health` | Confirm that the API and database are available. |
+
 ## Test
 
 Run the test suite with:
@@ -92,6 +112,12 @@ pytest
 - Uploaded templates and generated documents are local runtime data and are ignored by Git.
 - Public registration creates regular user accounts; administrator access is controlled separately.
 - File access is restricted to the owning user or authorized administrator.
+
+## Limitations
+
+- Only DOCX and PDF templates are accepted; uploads are limited to 25 MB.
+- Field detection is deliberately limited to the supported personal fields listed above. It does not turn arbitrary resume content into editable fields.
+- Document fidelity depends on the input format and template complexity; review generated output before using it as a final document.
 
 ## Project structure
 
